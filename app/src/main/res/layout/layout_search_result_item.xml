@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:layout_height="110dp"
+    android:padding="10dp"
+    >
+
+    <com.keyou.keyouplayer.view.CustomRoundAngleImageView
+        android:id="@+id/search_rv_item_pic"
+        android:layout_weight="4"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:scaleType="centerCrop"
+        />
+    <LinearLayout
+        android:padding="3dp"
+        android:layout_marginLeft="5dp"
+        android:layout_width="0dp"
+        android:layout_weight="5"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+        <TextView
+            android:layout_marginTop="5dp"
+            android:id="@+id/search_rv_item_title"
+            android:layout_weight="3"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:textSize="12sp"
+            android:text="   震惊！一男子竟然暴毙街头，真相令人乍舌..."
+            android:maxLines="4"
+            />
+        <LinearLayout
+            android:layout_weight="2"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:orientation="vertical"
+            >
+            <TextView
+                android:id="@+id/search_rv_item_auther"
+                android:layout_weight="1"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:textSize="12sp"
+                android:text="这是作者"
+                />
+            <TextView
+                android:id="@+id/search_rv_item_data"
+                android:layout_weight="1"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:textSize="12sp"
+                android:text="播放数：   弹幕数："
+                />
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+</LinearLayout>

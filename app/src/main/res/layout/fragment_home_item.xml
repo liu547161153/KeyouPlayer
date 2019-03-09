@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+
+    android:id="@+id/home_rv_item"
+    android:orientation="vertical"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+
+    >
+
+    <com.keyou.keyouplayer.view.CustomRoundAngleImageView
+        android:layout_marginTop="10dp"
+        android:id="@+id/home_rv_item_pic"
+        android:layout_width="match_parent"
+        android:layout_height="180dp"
+        android:scaleType="centerCrop"
+
+        />
+
+    <LinearLayout
+        android:layout_marginTop="5dp"
+        android:layout_width="match_parent"
+        android:layout_height="35dp"
+        android:orientation="horizontal"
+        >
+        <!--<com.elyeproj.loaderviewlibrary.LoaderImageView-->
+            <!--app:use_gradient="true"-->
+            <!--app:corners="16"-->
+            <!--android:id="@+id/home_rv_item_ava"-->
+            <!--android:layout_weight="2"-->
+            <!--android:layout_width="0dp"-->
+            <!--android:layout_height="50dp" />-->
+        <TextView
+            android:id="@+id/home_rv_item_title"
+            android:layout_weight="3"
+            android:layout_width="0dp"
+            android:text="让我康康！"
+            android:paddingLeft="40dp"
+            android:gravity="center"
+            android:maxLines="2"
+            android:ellipsize="end"
+            android:textSize="13sp"
+            android:layout_height="match_parent" />
+
+        <TextView
+            android:id="@+id/home_rv_item_tag"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:maxLines="1"
+            android:text="鬼畜"
+            android:textSize="13sp"
+
+            />
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            android:id="@+id/home_rv_item_namedate"
+            android:layout_width="match_parent"
+            android:layout_height="20dp"
+            android:paddingLeft="50dp"
+            android:textSize="11sp"
+            android:text="adasdadasd"
+            />
+
+    </LinearLayout>
+
+
+
+</LinearLayout>
