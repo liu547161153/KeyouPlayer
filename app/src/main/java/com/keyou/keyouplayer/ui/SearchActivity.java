@@ -80,7 +80,7 @@ public class SearchActivity extends AppCompatActivity {
         mSearchView.onActionViewExpanded();
         mSearchView.setSubmitButtonEnabled(true);
         SearchView.SearchAutoComplete et = (SearchView.SearchAutoComplete) mSearchView.findViewById(R.id.search_src_text);
-        et.setHint("请输入搜索内容，输入av号可直达");
+        et.setHint("请输入搜索内容，可输入av号直达");
         et.setHintTextColor(Color.WHITE);
         et.setTextColor(Color.WHITE);
         mSearchView.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
