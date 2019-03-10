@@ -44,9 +44,15 @@ dependencies {
     implementation 'com.github.bumptech.glide:glide:4.9.0'
     annotationProcessor 'com.github.bumptech.glide:compiler:4.9.0'
     implementation 'com.wuxiaolong.pullloadmorerecyclerview:library:1.1.2'
-    implementation 'com.mzlion:easy-okhttp:1.0.0-Final'
+    implementation 'com.zhy:okhttputils:2.6.2'
     implementation 'com.lqm:RoundImageView:1.0.0'
     implementation project(':expandtextview')
     implementation files('libs/commons-lang3-3.8.1.jar')
-    implementation 'cn.yc:YCVideoPlayerLib:2.6.1'
+    implementation 'com.shuyu:GSYVideoPlayer:6.0.3'
+    implementation  'com.github.ctiao:DanmakuFlameMaster:0.9.16'
+    implementation 'com.github.ctiao:ndkbitmap-armv7a:0.9.21'
+    implementation 'com.github.ctiao:ndkbitmap-armv5:0.9.21'
+    implementation 'com.github.ctiao:ndkbitmap-x86:0.9.21'
+
+
 }

@@ -30,18 +30,12 @@
                 android:layout_height="match_parent"
                 android:layout_marginBottom="10dp"
                 >
-                <ImageView
-                    android:id="@+id/bili_iv_go"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:scaleType="centerCrop"
-                    />
 
-                <org.yczbj.ycvideoplayerlib.player.VideoPlayer
+                <com.keyou.keyouplayer.view.KeyouPlayer
                     android:id="@+id/videoView"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:visibility="gone"
+
                     />
 
             </RelativeLayout>

@@ -108,7 +108,6 @@ public class BiliVideoActivity extends AppCompatActivity {
                     initplayer(videoUrl,picUrl);
                     webview.setVisibility(View.GONE);
                     //initWebView(cid);
-
                     break;
                 case DANMAKU:
                         status=1;

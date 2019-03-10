@@ -27,6 +27,7 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         mHomeToolBar=findViewById(R.id.home_toolbar);
         setSupportActionBar(mHomeToolBar);
+        //载入主页
         if (savedInstanceState == null) {
             getSupportFragmentManager().beginTransaction()
                     .replace(R.id.frl_Home, HomeFragment.newInstance())
