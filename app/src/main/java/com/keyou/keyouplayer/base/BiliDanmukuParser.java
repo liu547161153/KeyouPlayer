@@ -43,6 +43,7 @@ public class BiliDanmukuParser extends BaseDanmakuParser {
                 XMLReader xmlReader = XMLReaderFactory.createXMLReader();
                 XmlContentHandler contentHandler = new XmlContentHandler();
                 xmlReader.setContentHandler(contentHandler);
+
                 xmlReader.parse(new InputSource(source.data()));
                 return contentHandler.getResult();
             } catch (SAXException e) {

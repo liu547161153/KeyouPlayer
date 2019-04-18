@@ -134,7 +134,8 @@ public class SearchActivity extends AppCompatActivity {
                 try {
                     okhttpTool=new OkhttpTool(SearchActivity.this);
                     json = okhttpTool.getBiliSearchDefaultWords();
-                    jsonTool=new JsonTool(json);
+                    jsonTool=new JsonTool();
+                    jsonTool.setJson(json);
                     json=jsonTool.bili_SearchDefaultWords();
                     Message msg=Message.obtain();
                     msg.what=s;

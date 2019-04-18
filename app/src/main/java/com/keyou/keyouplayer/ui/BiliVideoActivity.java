@@ -84,7 +84,8 @@ public class BiliVideoActivity extends AppCompatActivity {
             switch (msg.what){
                 case GET:
                     try {
-                        JsonTool jsonTool=new JsonTool(getProfileJson());
+                        JsonTool jsonTool=new JsonTool();
+                        jsonTool.setJson(getProfileJson());
                         jsonTool.biliVideo();
                         picUrl=jsonTool.getPic().get(0);
                         cid=jsonTool.getCid().get(0);
@@ -105,16 +106,24 @@ public class BiliVideoActivity extends AppCompatActivity {
                 case WAITURL:
                     videoUrl=msg.obj.toString();
                     status=2;
-                    initplayer(videoUrl,picUrl);
-                    webview.setVisibility(View.GONE);
-                    //initWebView(cid);
+
+                    initWebView(cid);
                     break;
                 case DANMAKU:
+                    try {
                         status=1;
-                        //Filestool filestool=new Filestool();
-                       // filestool.write(BiliVideoActivity.this,danMuXml);
+                        Filestool filestool=new Filestool();
+                        filestool.write(BiliVideoActivity.this,danMuXml);
+
+                        initplayer(videoUrl,picUrl);
+                        webview.setVisibility(View.GONE);
+
 
                         break;
+                    } catch (IOException e) {
+                        e.printStackTrace();
+                    }
+
             }
         }
     };
@@ -146,7 +155,8 @@ public class BiliVideoActivity extends AppCompatActivity {
                     try {
                         okhttpTool = new OkhttpTool(BiliVideoActivity.this);
                         setProfileJson(okhttpTool.getBiliVideo(aid));
-                        JsonTool jsonTool = new JsonTool(getProfileJson());
+                        JsonTool jsonTool = new JsonTool();
+                        jsonTool.setJson(getProfileJson());
                         jsonTool.biliVideo();
                         setUserJoson(okhttpTool.getUserInfo(jsonTool.getMid().get(0)));
                         Message msg = Message.obtain();
@@ -391,7 +401,7 @@ public class BiliVideoActivity extends AppCompatActivity {
     }
 
     private void getDanmu() {
-      File file= new File(getFilesDir() + "/233.xml");
+      File file= new File(getFilesDir() + "/2333.xml");
       Log.d("TAG", String.valueOf(file));
       ((KeyouPlayer) videoView.getCurrentPlayer()).setDanmaKuStream(file);
 

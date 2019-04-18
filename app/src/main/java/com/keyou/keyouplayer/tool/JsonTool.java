@@ -23,7 +23,7 @@ public class JsonTool extends VideoMegListBean {
     private List<Integer> aid,typeid,review,video_review,cid,mid;
     private List<String> typename,title,subtitle,author,create,description,pic,duration,play,ava,danmaku,credit,fans,coins,favorites,reply;
 
-    public JsonTool(String s) throws JSONException {
+    public JsonTool() throws JSONException {
         aid=new ArrayList<>();
         typename=new ArrayList<>();
         title=new ArrayList<>();
@@ -43,6 +43,10 @@ public class JsonTool extends VideoMegListBean {
         fans=new ArrayList<>();
         reply=new ArrayList<>();
         cid=new ArrayList<>();
+
+    }
+
+    public void setJson(String s) throws JSONException {
         if(s.startsWith("[")){
             jsonArray=new JSONArray(s);
         }else {
@@ -50,8 +54,9 @@ public class JsonTool extends VideoMegListBean {
             json=new JSONObject(s);
         }
 
-
     }
+
+
 
     public void bili_Recommend() throws JSONException {
         jsonArray=json.getJSONArray("data");

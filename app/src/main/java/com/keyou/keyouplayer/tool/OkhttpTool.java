@@ -1,29 +1,24 @@
 package com.keyou.keyouplayer.tool;
 
 import android.content.Context;
-import android.util.Log;
-import android.widget.Toast;
 
 import com.keyou.keyouplayer.bean.BiliJsonMegBean;
-import com.mzlion.easyokhttp.HttpClient;
-
 
 import org.jsoup.Connection;
 
-import java.io.ByteArrayInputStream;
 import java.io.IOException;
 
+import java.io.InputStream;
 import java.net.URLEncoder;
 import java.security.KeyManagementException;
 
 import java.security.NoSuchAlgorithmException;
+import java.util.zip.GZIPInputStream;
 
+import master.flame.danmaku.danmaku.util.IOUtils;
 import okhttp3.OkHttpClient;
 import okhttp3.Request;
 import okhttp3.Response;
-
-
-import static android.net.sip.SipErrorCode.TIME_OUT;
 
 public class OkhttpTool {
     private BiliJsonMegBean biliJsonMegBean;
@@ -97,7 +92,7 @@ public class OkhttpTool {
     }
 
     public String getDanMu(int cid) throws IOException {
-        biliJsonMegBean.setUrl("http://comment.bilibili.com/"+cid+".xml");
+        biliJsonMegBean.setUrl("http://api.bilibili.com/x/v1/dm/list.so?oid="+cid);
         Request request = new Request.Builder()
                 .url(biliJsonMegBean.getUrl())
                 .build();
@@ -107,13 +102,9 @@ public class OkhttpTool {
 
 
 
+
+
 ////?act=search&word=%E5%95%8A&o=default&n=20&p=1&source=bilibili
-    public String test() throws IOException {
-        biliJsonMegBean.setUrl("https://www.biliplus.com/api/search_api?act=search&word=%E5%95%8A&o=default&n=20&p=1&source=bilibili");
-        String data=HttpClient.get(biliJsonMegBean.getUrl())
-                .execute().asString();
-        return data;
-    }
 
 
 

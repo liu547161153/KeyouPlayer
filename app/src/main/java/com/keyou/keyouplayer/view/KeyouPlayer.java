@@ -47,7 +47,7 @@ public class KeyouPlayer extends StandardGSYVideoPlayer {
 
     private long mDanmakuStartSeekPosition = -1;
 
-    private boolean mDanmaKuShow = false;
+    private boolean mDanmaKuShow = true;
 
     private File mDumakuFile;
 

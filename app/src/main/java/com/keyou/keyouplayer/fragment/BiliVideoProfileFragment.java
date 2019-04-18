@@ -60,7 +60,8 @@ public class BiliVideoProfileFragment extends Fragment implements PullLoadMoreRe
     }
 
     private void intdata() throws JSONException {
-        JsonTool jsonTool=new JsonTool(json);
+        JsonTool jsonTool=new JsonTool();
+        jsonTool.setJson(json);
         jsonTool.biliVideo();
         exTvtit.setText(jsonTool.getTitle().get(0));
         exTvpro.setText(jsonTool.getDescription().get(0));
@@ -72,7 +73,8 @@ public class BiliVideoProfileFragment extends Fragment implements PullLoadMoreRe
         credit.setText(jsonTool.getCredit().get(0));
         coin.setText(jsonTool.getCoins().get(0)+"");
         fav.setText(jsonTool.getFavorites().get(0)+"");
-        jsonTool=new JsonTool(userInfo);
+        jsonTool=new JsonTool();
+        jsonTool.setJson(userInfo);
         jsonTool.getUserInfo();
         fans.setText(jsonTool.getFans().get(0)+"粉丝");
 

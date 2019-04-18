@@ -29,7 +29,8 @@ public class ShowSearchResultAdapter extends RecyclerView.Adapter<ShowSearchResu
 
     public ShowSearchResultAdapter(Context context,String json) throws JSONException {
         this.context=context;
-        jsonTool=new JsonTool(json);
+        jsonTool=new JsonTool();
+        jsonTool.setJson(json);
         jsonTool.bili_Search();
 
 
