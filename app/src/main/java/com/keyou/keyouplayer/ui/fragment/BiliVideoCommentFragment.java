@@ -1,4 +1,4 @@
-package com.keyou.keyouplayer.fragment;
+package com.keyou.keyouplayer.ui.fragment;
 
 import android.os.Bundle;
 import android.support.annotation.NonNull;

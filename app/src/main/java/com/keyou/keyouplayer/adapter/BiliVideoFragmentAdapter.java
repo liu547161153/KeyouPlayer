@@ -5,8 +5,8 @@ import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentPagerAdapter;
 
-import com.keyou.keyouplayer.fragment.BiliVideoCommentFragment;
-import com.keyou.keyouplayer.fragment.BiliVideoProfileFragment;
+import com.keyou.keyouplayer.ui.fragment.BiliVideoCommentFragment;
+import com.keyou.keyouplayer.ui.fragment.BiliVideoProfileFragment;
 
 import java.util.ArrayList;
 import java.util.List;

@@ -33,9 +33,14 @@ public class ShowSearchResultAdapter extends RecyclerView.Adapter<ShowSearchResu
         jsonTool.setJson(json);
         jsonTool.bili_Search();
 
-
-
     }
+    public void loadMore(String json) throws JSONException {
+        jsonTool.setJson(json);
+        jsonTool.bili_Search();
+        notifyDataSetChanged();
+    }
+
+
 
     public class ViewHolder extends RecyclerView.ViewHolder{
         private CustomRoundAngleImageView pic;

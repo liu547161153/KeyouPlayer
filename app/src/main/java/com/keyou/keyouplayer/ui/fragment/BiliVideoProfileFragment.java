@@ -1,4 +1,4 @@
-package com.keyou.keyouplayer.fragment;
+package com.keyou.keyouplayer.ui.fragment;
 
 import android.content.Context;
 import android.os.Bundle;
@@ -39,6 +39,16 @@ public class BiliVideoProfileFragment extends Fragment implements PullLoadMoreRe
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         viewCourse = inflater.inflate(R.layout.fragment_bilivideo_profile,container,false);
+        findView();
+        try {
+            intdata();
+        } catch (JSONException e) {
+            e.printStackTrace();
+        }
+        return viewCourse;
+    }
+
+    private void findView() {
         exTvtit =viewCourse.findViewById(R.id.expand_title);
         exTvpro =viewCourse.findViewById(R.id.expand_profile);
         ava = viewCourse.findViewById(R.id.bilivideo_ava);
@@ -50,13 +60,6 @@ public class BiliVideoProfileFragment extends Fragment implements PullLoadMoreRe
         coin = viewCourse.findViewById(R.id.tv_coin);
         fav = viewCourse.findViewById(R.id.tv_fav);
         fans = viewCourse.findViewById(R.id.fans);
-
-        try {
-            intdata();
-        } catch (JSONException e) {
-            e.printStackTrace();
-        }
-        return viewCourse;
     }
 
     private void intdata() throws JSONException {
@@ -90,10 +93,6 @@ public class BiliVideoProfileFragment extends Fragment implements PullLoadMoreRe
         json=((BiliVideoActivity) context).getProfileJson();
         userInfo=((BiliVideoActivity) context).getUserJoson();
     }
-
-
-
-
 
 
 

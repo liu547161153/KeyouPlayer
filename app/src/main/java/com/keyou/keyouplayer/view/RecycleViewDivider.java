@@ -1,4 +1,4 @@
-package com.keyou.keyouplayer.adapter;
+package com.keyou.keyouplayer.view;
 
 
 import android.content.Context;

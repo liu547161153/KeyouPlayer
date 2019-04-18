@@ -8,27 +8,21 @@ import android.os.Message;
 import android.support.v4.view.MenuItemCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.SearchView;
 import android.support.v7.widget.Toolbar;
 import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
-import android.widget.Toast;
 
 import com.keyou.keyouplayer.R;
-import com.keyou.keyouplayer.adapter.HomeFragmentRecyclerViewAdapter;
-import com.keyou.keyouplayer.adapter.RecycleViewDivider;
-import com.keyou.keyouplayer.fragment.ShowSearchResultFragment;
+import com.keyou.keyouplayer.ui.fragment.ShowSearchResultFragment;
 import com.keyou.keyouplayer.tool.JsonTool;
 import com.keyou.keyouplayer.tool.OkhttpTool;
 
 import org.json.JSONException;
 
 import java.io.IOException;
-import java.io.UnsupportedEncodingException;
-import java.lang.reflect.Method;
 import java.security.KeyManagementException;
 import java.security.NoSuchAlgorithmException;
 

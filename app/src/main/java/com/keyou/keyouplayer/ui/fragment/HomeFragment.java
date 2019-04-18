@@ -1,4 +1,4 @@
-package com.keyou.keyouplayer.fragment;
+package com.keyou.keyouplayer.ui.fragment;
 
 import android.annotation.SuppressLint;
 import android.os.Bundle;
@@ -8,7 +8,6 @@ import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
 
-import android.support.v4.view.ViewCompat;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 
@@ -21,7 +20,7 @@ import android.view.ViewGroup;
 
 import com.keyou.keyouplayer.R;
 import com.keyou.keyouplayer.adapter.HomeFragmentRecyclerViewAdapter;
-import com.keyou.keyouplayer.adapter.RecycleViewDivider;
+import com.keyou.keyouplayer.view.RecycleViewDivider;
 import com.keyou.keyouplayer.tool.OkhttpTool;
 import com.wuxiaolong.pullloadmorerecyclerview.PullLoadMoreRecyclerView;
 

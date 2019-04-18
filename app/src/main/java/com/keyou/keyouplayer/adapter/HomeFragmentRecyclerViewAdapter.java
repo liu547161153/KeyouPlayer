@@ -40,7 +40,6 @@ public class HomeFragmentRecyclerViewAdapter extends RecyclerView.Adapter<HomeFr
         notifyDataSetChanged();
     }
 
-
     public class ViewHolder extends RecyclerView.ViewHolder {
         private TextView titleTv,tagTv,namedateTv;
         private CustomRoundAngleImageView picIv;
@@ -60,7 +59,6 @@ public class HomeFragmentRecyclerViewAdapter extends RecyclerView.Adapter<HomeFr
             });
         }
     }
-
 
     @NonNull
     @Override

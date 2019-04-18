@@ -11,7 +11,7 @@ import android.support.annotation.RequiresApi;
 import android.support.design.widget.TabLayout;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
-import android.text.TextUtils;
+
 import android.util.Log;
 import android.view.View;
 import android.webkit.JavascriptInterface;
@@ -32,8 +32,7 @@ import com.shuyu.gsyvideoplayer.listener.GSYSampleCallBack;
 import com.shuyu.gsyvideoplayer.listener.LockClickListener;
 import com.shuyu.gsyvideoplayer.utils.OrientationUtils;
 import com.shuyu.gsyvideoplayer.video.base.GSYVideoPlayer;
-import com.zhy.http.okhttp.OkHttpUtils;
-import com.zhy.http.okhttp.callback.FileCallBack;
+
 
 
 import org.apache.commons.lang3.StringUtils;
@@ -90,7 +89,7 @@ public class BiliVideoActivity extends AppCompatActivity {
                         picUrl=jsonTool.getPic().get(0);
                         cid=jsonTool.getCid().get(0);
                         //commentTabItem.("评 论 "+jsonTool.getReview().get(0));
-                        //biliplus的https无法连接上（暂时使用自带的浏览器获取下载地址）
+                        //biliplus的https无法连接上（暂时使用web控件获取视频地址）
                         status=1;
                         initWebView(cid);
                         BiliVideoFragmentAdapter adapter = new BiliVideoFragmentAdapter(getSupportFragmentManager(),jsonTool.getReview().get(0));
