@@ -136,7 +136,7 @@ public class ShowSearchResultFragment extends Fragment implements PullLoadMoreRe
         mRecyclerView = showSearch.findViewById(R.id.fragment_search_rv);
         recyclerView = mRecyclerView.getRecyclerView();
         mRecyclerView.setVerticalScrollBarEnabled(true);
-        mRecyclerView.setPullRefreshEnable(true);
+        mRecyclerView.setPullRefreshEnable(false);
         mRecyclerView.setFooterViewText("loading");
         mRecyclerView.setLinearLayout();
         mRecyclerView.setOnPullLoadMoreListener(this);
@@ -153,6 +153,9 @@ public class ShowSearchResultFragment extends Fragment implements PullLoadMoreRe
                     okhttpTool=new OkhttpTool(getContext());
                     String jsondata;
                     jsondata=okhttpTool.getBiliSearch(results,page,order);
+                    while (jsondata==null){
+                        jsondata=okhttpTool.getBiliSearch(results,page,order);
+                    }
                     Message msg=Message.obtain();
                     msg.what = REFRESH;
                     msg.obj =jsondata;
